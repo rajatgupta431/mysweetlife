@@ -1,0 +1,40 @@
+<ion-view title="All Treatments">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <div class="buttons">
+      <button class="button button-clear" ng-click="closeTreatList()">Close</button>
+    </div>
+  <ion-content class="has-header">
+    
+	 <table class="tablesaw tablesaw-stack" data-mode="stack">
+        <thead>
+            <tr>
+                <th><b>Time</th>
+                <th><b>Event Type</th>
+                <th><b>BG</th>
+                <th><b>Insulin</th>
+                <th><b>Carbs</th>
+                <th><b>Entered By</th>
+                <th><b>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-if="treatments != null" ng-repeat="treatment in treatments">
+                <td>{{treatment.createdAt | date:'short'}}</td>
+                <td>{{treatment.eventType}}</td>
+                <td>{{treatment.glucoseValue}} ({{treatment.glucoseType}})</td>
+                <td>{{treatment.insulinGiven | number: 2}}</td>
+                <td>{{treatment.carbsGiven}}</td>
+                <td>{{treatment.enteredBy}}</td>
+                <td>{{treatment.notes}}</td>
+            </tr>
+        </tbody>
+    </table>
+  	<div ng-if=" treatments == null">
+  		No Treatment given
+  	</div>
+
+
+  </ion-content>
+</ion-view>

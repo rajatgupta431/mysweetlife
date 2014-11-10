@@ -1,0 +1,82 @@
+
+
+<ion-view title="Treatment">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <form id="treatment-form" name="treatmentForm">
+            <fieldset class="treatmentData">            
+                <div class="list">
+                    <div class="bar bar-header bar-positive">
+                        <h1 class="title">Log a Treatment</h1>
+                    </div><br><br>
+                    <label class="item item-input">
+                        <span class="input-label" >Entered By:</span>
+                        <input type="text" ng-model="t.enteredBy" >
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Event Type:
+                        </div>
+                        <select id="eventType" ng-model="t.eventType">
+                            <option value="BG Check">BG Check</option>
+                            <option value="Snack Bolus">Snack Bolus</option>
+                            <option value="Meal Bolus">Meal Bolus</option>
+                            <option value="Correction Bolus">Correction Bolus</option>
+                            <option value="Carb Correction">Carb Correction</option>
+                            <option value="Question">Note or Question</option>
+                            <option value="Exercise">Exercise</option>
+                            <option value="Site Change">Pump Site Change</option>
+                            <option value="Sensor Start">Dexcom Sensor Start</option>
+                            <option value="D.A.D. Alert">D.A.D. Alert</option>
+                        </select>
+                    </label>
+                </div>
+                                    
+                    <label class="item item-input">
+                        <span class="input-label">Glucose Value:</span>
+                        <input  ng-model="t.glucoseValue" placeholder=" in mg/dl or mmol/l"  type="number">
+                    </label>
+        
+                        <label><h5><b>Measurement Method</b></h5></label>
+                         <label class="item item-radio">
+    <input type="radio" ng-model="t.glucoseType" value="Meter">
+    <div class="item-content">
+      Meter
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>                   
+                       
+                           
+                                         <label class="item item-radio">
+    <input type="radio" ng-model="t.glucoseType" value="Sensor">
+    <div class="item-content">
+      Sensor
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>       
+                   
+                    <label class="item item-input">
+                        <span class="input-label">Carbs Given:</span>
+                        <input  ng-model="t.carbsGiven" placeholder="Amount in grams"  type="number">
+                    </label>              
+                    <label class="item item-input">
+                        <span class="input-label">Insulin Given:</span>
+                        <input  ng-model="t.insulinGiven" placeholder="Amount in Units"  type="number">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label" >Notes or Comments:</span>
+                        <input type="text" ng-model="t.notes" >
+                    </label>
+               </fieldset>
+                <!-- Label and textarea -->
+                <button  class="button button-block button-positive" ng-click="showConfirm(t)"><i class="icon ion-document-text">&nbsp;&nbsp;&nbsp;</i>Submit Form
+                </button>
+             
+        </form>
+        <button class="button button-block button-balanced" ng-click="showTreatList()"><i class="icon ion-android-note">&nbsp;&nbsp;&nbsp;</i>View Treatments Log
+        </button>
+    </ion-content>
+</ion-view>
+

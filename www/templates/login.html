@@ -1,0 +1,45 @@
+<div class="modal loginbg">
+  <ion-header-bar class="bar-royal nav-title-slide-ios7">
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear button-light" ng-click="closeLogin()"><i class="icon ion-close-circled"></i></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <div class="inputbg"><input type="text" ng-model="loginData.username"></div>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password&nbsp;</span>
+          <div class="inputbg"><input type="password" ng-model="loginData.password"></div>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="doLogin(loginData)">Log In</button>
+        </label>
+      </div>
+    </form>
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <div class="inputbg-sp"><input type="text" ng-model="reg.name"></div>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <div class="inputbg"><input type="text" ng-model="reg.username"></div>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password&nbsp;</span>
+          <div class="inputbg"><input type="password" ng-model="reg.password"></div>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="doReg(reg)">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</div>
+

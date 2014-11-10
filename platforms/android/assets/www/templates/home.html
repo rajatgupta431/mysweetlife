@@ -1,0 +1,46 @@
+<ion-view title="Home">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header backgr">
+
+  	<div style="width:100%;height:100px;">
+  		<div class="first-half">
+  			<div class="button-holder" style"position:relative;top: 65px;left: 45px;border:3px solid #32cd32;">
+  			<button class="button ion-android-search button-clear button-large button-light" ng-click="searchFood(foods)" ></button>
+  			</div>
+  		</div>
+  		<div class="second-half">
+  			<div class="button-holder" style"position:relative;top: 65px;left: 45px;border:3px solid #32cd32;">
+      		<button class="button ion-android-add button-clear button-large button-light" ng-click="searchFood(foods)"></button>
+      		</div>
+      	</div>
+  	</div>
+  	<div class="image-container">
+	  	<div class="row">
+	  		<div class="col">
+	  			<button class="button button-large button-clear button-stable">
+	        		<i class="icon ion-coffee">&nbsp;&nbsp;&nbsp;</i>Coffee
+	        	</button>
+	    	</div>
+		  	<div class="col">
+		  		<button class="button button-large button-clear button-stable">
+		        	<i class="icon ion-icecream">&nbsp;&nbsp;&nbsp;</i>Ice-Cream
+		        </button>
+		    </div>
+		</div>
+		<div class="row">
+	  		<div class="col">
+	  			<button class="button button-large button-clear button-stable">
+	        		<i class="icon ion-wineglass">&nbsp;&nbsp;&nbsp;</i>Juice
+	        	</button>
+	    	</div>
+		  	<div class="col">
+		  		<button class="button button-large button-clear button-stable">
+		        	<i class="icon ion-pizza">&nbsp;&nbsp;&nbsp;</i>Pizza
+		        </button>
+		    </div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
